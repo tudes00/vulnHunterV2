@@ -1,0 +1,7 @@
+# Nmap 7.95 scan initiated Wed Sep  3 16:41:43 2025 as: nmap --script=vuln -oN output/nmap/testhtml5.vulnweb.com.txt testhtml5.vulnweb.com
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).

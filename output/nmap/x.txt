@@ -1,0 +1,1 @@
+# Nmap 7.95 scan initiated Mon Sep  8 18:20:24 2025 as: nmap -sV -oN output/nmap/x.txt x

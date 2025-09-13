@@ -1,0 +1,13 @@
+/old
+/try
+/admin
+/unauth
+/notallowed
+/bad
+/error
+/unavail
+/accepted
+/created
+/nocontent
+/login
+/new
