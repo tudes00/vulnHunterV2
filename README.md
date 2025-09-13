@@ -14,18 +14,12 @@ Config réutilisable :
 
 Lire une config depuis un fichier .toml ou .yaml (target, wordlist, threads, proxy) → ça évite de tout retaper.
 
-User-Agent rotation :
-Charger une liste d’USER_AGENT randomisés depuis un fichier, ça aide à éviter certains filtres.
-
 Headers personnalisés :
 Ajouter une option pour passer des headers custom (Authorization, Cookie, etc.).
-relancer X fois si une requête échoue.
 
-Filtrage par taille :
-	Beaucoup d’outils filtrent les réponses par taille (ex: ignorer toutes les 404 qui font 1234 bytes).
-	Tu pourrais afficher la taille de la réponse, et laisser l’utilisateur définir un filtre (--exclude-size 1234).
 
-Auto-wordlist expansion :
+
+-> yea this is amazing!!!!!!! Auto-wordlist expansion :
 	Quand tu trouves un répertoire (/admin/), relancer un scan à l’intérieur avec la même wordlist → exploration récursive.
 
 Detection WAF / rate-limit :
