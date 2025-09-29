@@ -2,7 +2,7 @@
  - backup file finder
  - USER_AGENT  + proxy rotation random pour dirfinder pour eviterde se faire err 429
   - rajouter un truc pour directement lancer une commande genre python3 main.py --tools=dirfinder localhost:8000....
-  - remove pycache from github repo
+
 
 
 
@@ -32,8 +32,5 @@ SSL strict / souple :
 
 Actuellement tu ignores la vérification SSL → tu pourrais donner le choix (--insecure comme curl).
 
-Gestion des erreurs enrichie :
-
-Loguer les erreurs (timeout, refused, etc.) séparément pour debug.
-
 proxy qui tourne
+file for urls

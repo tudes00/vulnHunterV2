@@ -11,24 +11,8 @@ RATE_PERIOD = 5
 request_times = defaultdict(list)
 
 class MyHandler(BaseHTTPRequestHandler):
-    def rate_limited(self):
-        ip = self.client_address[0]
-        now = time.time()
-        # Remove timestamps older than RATE_PERIOD
-        request_times[ip] = [t for t in request_times[ip] if now - t < RATE_PERIOD]
-        if len(request_times[ip]) >= RATE_LIMIT:
-            return True
-        request_times[ip].append(now)
-        return False
 
     def do_GET(self):
-        if self.rate_limited():
-            self.send_response(429)
-            self.send_header("Content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write(b"Too Many Requests")
-            return
-
         print(">>> do_GET called for", self.path)  # debug
         # redirections
         if self.path == "/old":
@@ -53,6 +37,48 @@ class MyHandler(BaseHTTPRequestHandler):
             self.send_response(403)
             self.end_headers()
             self.wfile.write(b"Forbidden")
+
+        # admin dashboard
+        elif self.path == "/admin/dashboard":
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"Admin Dashboard")
+
+        elif self.path == "/admin/dashboard/settings":
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"Admin Dashboard Settings")
+
+        elif self.path == "/admin/dashboard/users":
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"Admin Dashboard Users")
+
+        elif self.path == "/admin/dashboard/users/list":
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"Admin Dashboard Users List")
+
+        # exemple dashboard
+        elif self.path == "/exemple/dashboard":
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"Exemple Dashboard")
+
+        elif self.path == "/exemple/dashboard/page":
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"Exemple Dashboard Page")
+
+        elif self.path == "/exemple/dashboard/settings":
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"Exemple Dashboard Settings")
+
+        elif self.path == "/exemple/dashboard/users":
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"Exemple Dashboard Users")
 
         # unauthorized
         elif self.path == "/unauth":
