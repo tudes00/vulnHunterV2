@@ -26,6 +26,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")
 from utils.utils import defaultWordlistDirFinder, USER_AGENTS, defaultWordlistDirFinderRecursive
 
 console = Console()
+
+
+#TODO improve ssl handling
 ssl_context = ssl.create_default_context()
 ssl_context.check_hostname = False
 ssl_context.verify_mode = ssl.CERT_NONE

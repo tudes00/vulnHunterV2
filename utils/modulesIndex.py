@@ -6,6 +6,7 @@ from modules.nmap import nmap as nmapModule
 from modules.dirFinder import dirFinder as dirFinderModule
 from modules.full import full as fullModule
 from modules.settings import settings as settingsModule
+from modules.backup import backup as backupModule
 
 def nmap():
     nmapModule()
@@ -18,3 +19,6 @@ def full():
 
 def settings():
     settingsModule()
+
+def backup():
+    backupModule()
