@@ -1,8 +1,7 @@
 ## TODO:
- - backup file finder
+ - backup file finder: list generator puis scan
  - USER_AGENT  + proxy rotation random pour dirfinder pour eviterde se faire err 429
   - rajouter un truc pour directement lancer une commande genre python3 main.py --tools=dirfinder localhost:8000....
-
 
 
 

@@ -15,7 +15,7 @@ def display_tools():
     clearScreen()
     task = questionary.select(
         "What would you like to do?",
-        choices=["nmap", "directory finder", "backup list generator", "settings", "exit"],
+        choices=["nmap", "directory finder", "backup finder", "settings", "exit"],
         style=custom_style).ask()
     handle_task(task)
 
@@ -27,7 +27,7 @@ def handle_task(task):
         nmap()
     elif task == "directory finder":
         dirFinder()
-    elif task == "backup list generator":
+    elif task == "backup finder":
         backup()
     elif task == "settings":
         settings()
