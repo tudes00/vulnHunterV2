@@ -1,0 +1,10 @@
+http://localhost:8000/old
+http://localhost:8000/unauth
+http://localhost:8000/try
+http://localhost:8000/admin
+http://localhost:8000/notallowed
+http://localhost:8000/old
+http://localhost:8000/admin/dashboard
+http://localhost:8000/admin/dashboard/settings
+http://localhost:8000/admin/dashboard/users
+http://localhost:8000/admin/dashboard/users/list

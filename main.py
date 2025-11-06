@@ -1,5 +1,5 @@
 from utils.utils import custom_style, getOs, clearScreen, exit
-from utils.modulesIndex import nmap, dirFinder, backup, settings
+from utils.modulesIndex import nmap, dirFinder, settings, vuln
 
 from rich import print
 import questionary
@@ -10,13 +10,14 @@ from rich.traceback import install
 install(show_locals=True)
 
 
-
 def display_tools():
     clearScreen()
-    task = questionary.select(
-        "What would you like to do?",
-        choices=["nmap", "directory finder", "backup finder", "settings", "exit"],
-        style=custom_style).ask()
+    task = questionary.select("What would you like to do?",
+                              choices=[
+                                  "nmap", "directory finder", "vuln scanner",
+                                  "settings", "exit"
+                              ],
+                              style=custom_style).ask()
     handle_task(task)
 
 
@@ -27,8 +28,8 @@ def handle_task(task):
         nmap()
     elif task == "directory finder":
         dirFinder()
-    elif task == "backup finder":
-        backup()
+    elif task == "vuln scanner":
+        vuln()
     elif task == "settings":
         settings()
     else:
